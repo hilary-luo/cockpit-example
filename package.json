@@ -49,12 +49,18 @@
     "typescript": "5.8.2"
   },
   "dependencies": {
+    "@foxglove/rosmsg": "^5.0.4",
+    "@foxglove/rosmsg-serialization": "^2.0.3",
+    "@foxglove/rosmsg2-serialization": "^2.0.4",
+    "@foxglove/ws-protocol": "^0.8.0",
     "@patternfly/patternfly": "5.4.2",
     "@patternfly/react-code-editor": "^6.1.0",
     "@patternfly/react-core": "5.4.14",
     "@patternfly/react-icons": "5.4.2",
     "@patternfly/react-styles": "5.4.1",
     "@patternfly/react-table": "^6.2.0",
+    "eventemitter3": "^5.0.1",
+    "isomorphic-ws": "^5.0.0",
     "monaco-editor": "^0.52.2",
     "monaco-editor-webpack-plugin": "^7.1.0",
     "react": "18.3.1",

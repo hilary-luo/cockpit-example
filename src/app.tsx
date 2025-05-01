@@ -47,9 +47,12 @@ import cockpit from 'cockpit';
 
 import { Table, Thead, Tbody } from '@patternfly/react-table';
 
-import ROSLIB from 'roslib';
+import { FoxgloveClient, SubscriptionId } from "@foxglove/ws-protocol";
 
 import { Spinner } from "@patternfly/react-core"; // Import Spinner component
+
+import { Ros } from "./Ros";
+import { Topic } from "./Topic";
 
 loader.config({ monaco });
 
@@ -70,6 +73,7 @@ export const Application = () => {
     const [isSaving, setIsSaving] = useState(false); // State to track save button status
     const [isDarkTheme, setIsDarkTheme] = React.useState(false);
     const [isMinimapVisible, setIsMinimapVisible] = React.useState(false);
+    const [url, setUrl] = useState<string>("ws://localhost:8765");
 
     useEffect(() => {
         const hostname = cockpit.file('/etc/hostname');
@@ -112,26 +116,30 @@ export const Application = () => {
     }, []);
 
     useEffect(() => {
-        const ros = new ROSLIB.Ros({
-            url: 'ws://localhost:9091'
-        });
+        if (namespace === _("default_namespace") || !url) {
+            console.warn("Namespace or URL is not set. Skipping WebSocket configuration.");
+            return;
+        }
+
+        const ros = new Ros({ url });
 
         ros.on('connection', () => {
-            console.log('Connected to rosbridge WebSocket');
+            console.log('Connected to Foxglove bridge');
         });
 
         ros.on('error', (error) => {
-            console.error('Error connecting to rosbridge:', error);
+            console.error('Error connecting to Foxglove bridge:', error);
         });
 
         ros.on('close', () => {
-            console.log('Connection to rosbridge closed');
+            console.log('Connection to Foxglove bridge closed');
         });
 
-        const diagnosticsTopic = new ROSLIB.Topic({
-            ros,
+
+        const diagnosticsTopic = new Topic({
+            ros: ros,
             name: `/${namespace}/diagnostics_agg`,
-            messageType: 'diagnostic_msgs/DiagnosticArray'
+            messageType: "diagnostic_msgs/DiagnosticArray",
         });
 
         diagnosticsTopic.subscribe((message) => {
@@ -151,7 +159,7 @@ export const Application = () => {
             diagnosticsTopic.unsubscribe();
             ros.close();
         };
-    }, [namespace]);
+    }, [namespace, url]); // Re-run effect when namespace or url changes
 
     // Code Editor copied and pasted from Patternfly
 
