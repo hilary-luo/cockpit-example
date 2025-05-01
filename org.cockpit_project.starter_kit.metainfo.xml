@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>org.cockpit_project.starter_kit</id>
+  <id>org.cockpit_project.ros2diagnostics</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <name>Starter Kit</name>
-  <summary>Scaffolding for a cockpit module</summary>
+  <name>ROS 2 Diagnostic Viewer</name>
+  <summary>View ROS 2 Diagnostics</summary>
   <description>
     <p>
-      Scaffolding for a cockpit module.
-
-      This is just a demo which does not do much. Please replace
-      this with a real description.
+      This is module to view ROS 2 diagnostics.
     </p>
   </description>
   <extends>org.cockpit_project.cockpit</extends>
@@ -18,6 +15,6 @@
   <url type="bugtracker">https://github.com/cockpit-project/starter-kit/issues</url>
   <update_contact>cockpit-devel_AT_lists.fedorahosted.org</update_contact>
   <developer id="org.cockpit-project">
-    <name>Cockpit Project</name>
+    <name>Clearpath Robotics</name>
   </developer>
 </component>

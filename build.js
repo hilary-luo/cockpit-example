@@ -82,7 +82,10 @@ const context = await esbuild.context({
     entryPoints: ['./src/index.js'],
     external: ['*.woff', '*.woff2', '*.jpg', '*.svg', '../../assets*'], // Allow external font files which live in ../../static/fonts
     legalComments: 'external', // Move all legal comments to a .LEGAL.txt file
-    loader: { ".js": "jsx" },
+    loader: {
+        ".js": "jsx",
+        ".ttf": "binary"
+    },
     metafile: !!args.metafile,
     minify: production,
     nodePaths,

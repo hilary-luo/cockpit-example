@@ -1,5 +1,4 @@
-# starter-kit German translations
-#, fuzzy
+# starter-kit French translations
 msgid ""
 msgstr ""
 "Project-Id-Version: starter-kit 1.0\n"
@@ -7,73 +6,77 @@ msgstr ""
 "POT-Creation-Date: 2022-03-09 16:09+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: de\n"
+"Language-Team: French <LL@li.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+
+#: src/index.html:20
+msgid "Cockpit Starter Kit"
+msgstr "Kit de démarrage Cockpit"
 
 #: src/app.tsx:29
 msgid "Unknown"
-msgstr "Unbekannt"
+msgstr "Inconnu"
 
 #: src/app.tsx:43
 msgid "Running on $0"
-msgstr "Läuft auf $0"
+msgstr "En cours d'exécution sur $0"
 
 #: src/app.tsx:100
 msgid "robot.yaml editable"
-msgstr "robot.yaml bearbeitbar"
+msgstr "robot.yaml modifiable"
 
 #: src/app.tsx:110
 msgid "Dark theme"
-msgstr "Dunkles Thema"
+msgstr "Thème sombre"
 
 #: src/app.tsx:115
 msgid "Minimap"
-msgstr "Minikarte"
+msgstr "Mini-carte"
 
 #: src/app.tsx:140
 msgid "Saving..."
-msgstr "Speichern..."
+msgstr "Enregistrement..."
 
 #: src/app.tsx:141
 msgid "Save"
-msgstr "Speichern"
+msgstr "Enregistrer"
 
 #: src/app.tsx:150
 msgid "Errors and Warnings"
-msgstr "Fehler und Warnungen"
+msgstr "Erreurs et avertissements"
 
 #: src/app.tsx:155
 msgid "Errors"
-msgstr "Fehler"
+msgstr "Erreurs"
 
 #: src/app.tsx:160
 msgid "Stale Diagnostics"
-msgstr "Veraltete Diagnosen"
+msgstr "Diagnostics obsolètes"
 
 #: src/app.tsx:165
 msgid "Warnings"
-msgstr "Warnungen"
+msgstr "Avertissements"
 
 #: src/app.tsx:170
 msgid "Diagnostics Monitor"
-msgstr "Diagnosemonitor"
+msgstr "Moniteur de diagnostics"
 
 #: src/app.tsx:175
 msgid "No diagnostics data available."
-msgstr "Keine Diagnosedaten verfügbar."
+msgstr "Aucune donnée de diagnostic disponible."
 
 #: src/app.tsx:180
 msgid "Name"
-msgstr "Name"
+msgstr "Nom"
 
 #: src/app.tsx:185
 msgid "Message"
-msgstr "Nachricht"
+msgstr "Message"
 
 #: src/app.tsx:190
 msgid "No data available."
-msgstr "Keine Daten verfügbar."
+msgstr "Aucune donnée disponible."
