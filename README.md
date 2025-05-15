@@ -1,4 +1,4 @@
-# Cockpit Starter Kit
+# Cockpit Starter Kit - Test Implementation
 
 Scaffolding for a [Cockpit](https://cockpit-project.org/) module.
 
